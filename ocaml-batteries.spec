@@ -10,6 +10,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml >= 3.11
 BuildRequires:  ocaml-findlib
 
+BuildRequires:  camlp4
 BuildRequires:  ocaml-type-conv
 BuildRequires:  ocaml-sexplib-devel >= 3.7.5
 BuildRequires:  ocaml-bin-prot-devel
