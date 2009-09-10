@@ -9,6 +9,7 @@ Source0:        http://forge.ocamlcore.org/frs/download.php/199/batteries-%{vers
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml >= 3.11
 BuildRequires:  ocaml-findlib
+BuildRequires:  ncurses-devel
 
 BuildRequires:  camlp4
 BuildRequires:  ocaml-type-conv
