@@ -1,14 +1,14 @@
 Name:           ocaml-batteries
-Version:        20090405
+Version:        20090903
 Release:        %mkrel 1
 Summary:        Batteries included: OCaml development platform
 License:        LGPL + linking exception, MIT, BSD, public domain
 Group:          Development/Other
 URL:            http://batteries.forge.ocamlcore.org/
-Source0:        http://forge.ocamlcore.org/frs/download.php/199/batteries-%{version}.tgz
+Source0:        http://forge.ocamlcore.org/frs/download.php/256/batteries-%{version}.tgz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml >= 3.11
-BuildRequires:  ocaml-findlib
+BuildRequires:  ocaml-findlib-devel
 BuildRequires:  ncurses-devel
 
 BuildRequires:  camlp4
@@ -79,7 +79,6 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/batteries*/*.cmi
 %{_libdir}/ocaml/batteries*/*.cmo
 %{_libdir}/ocaml/batteries/ocaml
-%{_libdir}/ocaml/batteries/ocaml.in
 %{_libdir}/ocaml/batteries/ocamlbuild
 %{_libdir}/ocaml/batteries/ocamlc
 %{_libdir}/ocaml/batteries/ocamlcp
@@ -88,7 +87,9 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/batteries/top.ml
 %{_libdir}/ocaml/batteries/toplevel.top
 %{_libdir}/ocaml/batteries_nothreads/run.byte
+%{_libdir}/ocaml/batteries_nothreads/run.native
 %{_libdir}/ocaml/batteries_threads/run.byte
+%{_libdir}/ocaml/batteries_threads/run.native
 
 %files devel
 %defattr(-,root,root)
