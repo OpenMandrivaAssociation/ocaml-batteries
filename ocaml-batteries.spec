@@ -1,11 +1,12 @@
 Name:           ocaml-batteries
 Version:        20090903
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Batteries included: OCaml development platform
 License:        LGPL + linking exception, MIT, BSD, public domain
 Group:          Development/Other
 URL:            http://batteries.forge.ocamlcore.org/
 Source0:        http://forge.ocamlcore.org/frs/download.php/256/batteries-%{version}.tgz
+Source1:        batteries-beta1-html.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml >= 3.11
 BuildRequires:  ocaml-findlib-devel
@@ -50,8 +51,16 @@ Requires:       %{name} = %{version}-%{release}
 The %{name}-devel package contains libraries and signature files for
 developing applications that use %{name}.
 
+%package        doc
+Summary:        Documentation for %{name}
+Group:          Development/Other
+
+%description    doc
+The %{name}-doc package contains html documentation for %{name}.
+
 %prep
 %setup -q -n batteries-%{version}
+tar xjf %{SOURCE1}
 
 %build
 %configure --prefix=%{buildroot}
@@ -95,4 +104,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/ocaml/batteries*/*.a
 %{_libdir}/ocaml/batteries*/*.cmxa
+
+%files doc
+%defattr(-,root,root)
+%doc html
 
