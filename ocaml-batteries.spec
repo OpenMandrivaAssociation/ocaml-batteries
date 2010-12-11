@@ -1,6 +1,6 @@
 Name:           ocaml-batteries
 Version:        20090903
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        Batteries included: OCaml development platform
 License:        LGPL + linking exception, MIT, BSD, public domain
 Group:          Development/Other
