@@ -4,7 +4,7 @@ Release:        %mkrel 4
 Summary:        Batteries included: OCaml development platform
 License:        LGPL + linking exception, MIT, BSD, public domain
 Group:          Development/Other
-URL:            http://batteries.forge.ocamlcore.org/
+URL:            https://batteries.forge.ocamlcore.org/
 Source0:        http://forge.ocamlcore.org/frs/download.php/256/batteries-%{version}.tgz
 Source1:        batteries-beta1-html.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
