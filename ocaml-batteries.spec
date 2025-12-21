@@ -8,6 +8,11 @@ URL:            https://batteries.forge.ocamlcore.org/
 Source0:        http://forge.ocamlcore.org/frs/download.php/256/batteries-%{version}.tgz
 Source1:        batteries-beta1-html.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  ocaml >= 3.11
 BuildRequires:  ocaml-findlib-devel
 BuildRequires:  ncurses-devel
